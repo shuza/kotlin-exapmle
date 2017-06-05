@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 25
@@ -26,5 +28,32 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
     testCompile 'junit:junit:4.12'
+
+    // kotlin
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.anko:anko-sdk25:$anko_version"
+    compile "org.jetbrains.anko:anko-sdk25-coroutines:$anko_version"
+
+    // Butter knife
+    compile "com.jakewharton:butterknife:$butterknife_version"
+    kapt "com.jakewharton:butterknife-compiler:$butterknife_version"
+
+    // Dagger 2
+    compile "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // Retrofit 2
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile 'com.google.code.gson:gson:2.7'
+
+    // RxJava
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.2.7'
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+
 }
