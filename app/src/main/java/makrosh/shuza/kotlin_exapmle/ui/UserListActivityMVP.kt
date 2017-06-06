@@ -1,5 +1,7 @@
 package makrosh.shuza.kotlin_exapmle.ui
 
+import rx.Observable
+
 /**
  * Created by Boka on 06-Jun-17.
  */
@@ -9,7 +11,7 @@ interface UserListActivityMVP {
     interface View {
         fun showLoadingDialog()
         fun showErrorMessage(message: String)
-        fun showUserList()
+        fun addUserListItem(model: UserModel)
     }
 
     interface Presenter {
@@ -19,7 +21,7 @@ interface UserListActivityMVP {
     }
 
     interface Model {
-
+        fun getUserList(): Observable<UserModel>
     }
 
 }

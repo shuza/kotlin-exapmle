@@ -46,9 +46,9 @@ dependencies {
 
     // Retrofit 2
     compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.2'
     provided 'javax.annotation:jsr250-api:1.0'
-    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     compile 'com.google.code.gson:gson:2.7'
 
     // RxJava
