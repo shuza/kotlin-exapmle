@@ -9,7 +9,7 @@
     tools:context="makrosh.shuza.kotlin_exapmle.UserListActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvUserList"
+        android:id="@+id/rvUserListUI"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

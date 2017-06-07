@@ -23,7 +23,7 @@ class UserListPresenter(private val model: UserListActivityMVP.Model) : UserList
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(object : Observer<UserModel> {
                     override fun onCompleted() {
-
+                        view?.showErrorMessage("data load complete")
                     }
 
                     override fun onNext(t: UserModel?) {
