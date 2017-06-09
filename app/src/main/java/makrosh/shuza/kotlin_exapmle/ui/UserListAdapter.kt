@@ -26,7 +26,7 @@ class UserListAdapter(private var userList: MutableList<UserModel>) : RecyclerVi
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserItemViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_user, parent)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_user, parent, false)
         return UserItemViewHolder(view)
     }
 
